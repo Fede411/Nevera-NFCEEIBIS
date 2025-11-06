@@ -31,6 +31,7 @@
     if (queryData.results.length === 0) {
       return res.status(404).json({ error: `Product '${product}' not found in database` });
     }
+    console.log("Using database ID:", process.env.NOTION_DATABASE_ID);
 
     const page = queryData.results[0];
     const pageId = page.id;
